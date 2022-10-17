@@ -8,3 +8,35 @@
     <p>딱히 합칠게 없어서 그냥 신규브랜치 보고 "지금부터 니 이름은 main 브랜치여" 하는 것(그냥 결과는 같다)</p>
     <p>그래서 "기준이 되는 브랜치에 신규 commit이 없으면" 자동으로 fast-forward merge가 발동</p>    
 </li>
+<li>
+    <h2>rebase</h2>
+    <p>rebase는 브랜치의 시작점을 다른 commit으로 옮겨주는 행위</p>
+    <ul>
+        <li>rebase를 이용해서 신규브랜치의 시작점을 main 브랜치 최근 commit으로 옮김</li>
+        <li>fast-forward merge하는 것입니다.</li>
+        <li>명령어 순서</li>
+        <li>
+            git switch 새로운브랜치<br/>
+            git rebase main<br/><br/>            
+            git switch main<br/>
+            git merge 새로운브랜치<br/>
+        </li>
+    </ul>
+</li>
+<li>
+    <h2>squash and merge</h2>
+    <p>merge를 대충 3-way-merge하면 관리하기 힘듬</p>
+    <ol>
+        <li>3-way merge 된 것들은 매우 복잡해보임</li>
+        <li>main 브랜치 git log 출력해보면 3-way merge된 브랜치들의 commit 내역도 다 같이 출력되어서 더러워짐</li>
+    </ol>
+    <br/>
+    <br/>
+    <p>squash and merge하면 새 브랜치에 있던 코드변경사항들이 main 브랜치로 텔레포트합니다.</p>
+    <p>이렇게 하면 main 브랜치의 git log 출력해볼 때 merge 완료된 브랜치의 commit 같은 것들은 출력되지 않음</p>
+    <p>순서 : <br/> 
+        git switch main<br/> 
+        git merge --squash 브랜치명<br/> 
+        git commit -m '메세지'<br/> 
+    </p>
+</li>

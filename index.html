@@ -76,7 +76,13 @@
             </li>
             <li>
                 <h2>3-way-merge</h2>
-                <p></p>
+                <p>브랜치에 각각 신규 commit이 1회 이상 있는 경우 merge 명령을 내리면 두 브랜치의 코드를 합쳐서 새로운 commit을 자동으로 생성해주는데 이게 3-way-merge임(merge의 기본 동작 방식)</p>
+            </li>
+            <li>
+                <h2>fast-forward merge</h2>
+                <p>새로운 브랜치에만 commit 이 있고  기준이 되는 브랜치에는 신규 commit 이 없는 경우 merge 하게 되면 "fast-forward merge 되었습니다" 라고 알려줌</p>
+                <p>딱히 합칠게 없어서 그냥 신규브랜치 보고 "지금부터 니 이름은 main 브랜치여" 하는 것(그냥 결과는 같다)</p>
+                <p>그래서 "기준이 되는 브랜치에 신규 commit이 없으면" 자동으로 fast-forward merge가 발동</p>    
             </li>
         </ul>
     </div>

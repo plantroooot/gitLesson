@@ -116,6 +116,31 @@
                     git commit -m '메세지'<br/> 
                 </p>
             </li>
+            <li>
+                <h2>git restore</h2>
+                <p>파일 하나를 되돌리는 경우 사용</p>
+                <ul>
+                    <li>git restore 파일명 ->최근 commit 된 상태로 현재 파일의 수정내역을 되돌림</li>
+                    <li>git restore --source 커밋아이디 파일명 -> 입력한 파일이 특정 커밋아이디 시점으로 복구</li>
+                    <li>git restore --staged 파일명 -> 특정 파일의 staging 취소</li>
+                </ul>
+            </li>
+            <li>
+                <h2>git revert</h2>
+                <p>특정 파일의 commit을 취소(되돌림) ->  commit 하나를 취소한 commit을 하나 생성</p>
+                <p>git revert 커밋아이디</p>
+                <ul>
+                    <li>revert 할 때 동시에 여러개의 commit id 입력가능 </li>
+                    <li>최근 했던 commit 1개만 revert하고 싶으면 git revert HEAD</li>
+                    <li>merge 명령으로 인해 새로 만들어진 commit도 revert 가능</li>
+                </ul>
+            </li>
+            <li>
+                <h2>git reset</h2>
+                <ul>
+                    <li>git reset --hard 커밋아이디 -> 해당 커밋이 생성될 때로 시간을 되돌려줍니다. </li>
+                </ul>
+            </li>
         </ul>
     </div>
 </body>
